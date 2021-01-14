@@ -15,12 +15,14 @@ export class AppComponent implements OnInit {
   constructor(private userService : UserServices){};
 
   ngOnInit(){
-    console.log(`hello $(this.userService.users)`)
-    
     this.users = this.userService.users
-    console.log(this.userService.users.values);
+    
   }
 
+  onDelete(index : number){
+    this.users.splice(index,1);
+    
+  }
   
 
   

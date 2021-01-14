@@ -16,15 +16,15 @@
       <tbody>
         <tr *ngFor="let user of users ;let i = index">
           <th scope="row">{{i}}</th>
-          <td>{{user.name}}</td>
-          <td>{{user.email}}</td>
+          <td >{{user.name}}</td>
+          <td >{{user.email}}</td>
           <td>{{user.username}}</td>
-          
+          <td><button type="button" class="btn btn-danger" (click)="onDelete(i)">Delete</button></td>
         </tr>
       </tbody>
     </table>
     <ng-template [ngIf]="users.length==0">
-      <p>No Users Available</p>
+      <p>No Users Available, Please add one!</p>
     </ng-template> 
   </body>
 </html>

@@ -16,6 +16,7 @@ export class UsersComponent implements OnInit {
 
   onAddUser(name:string,email:string,username:string){
     this.userServices.addUser(name,email,username);
+    // document.getElementById('1').onreset()
   }
 
 }
